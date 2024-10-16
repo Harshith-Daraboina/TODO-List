@@ -1,0 +1,147 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+background: linear-gradient(135deg, #fdb4ff,#f7a35e);
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+.todoapp h2 img{
+    max-width: 50px;
+    margin-left: 20px;
+}
+
+.todoapp h2 {
+    margin-bottom: 40px;
+    color: #2c1313;
+    margin: 40px auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoapp{
+    width: 100%;
+    max-width: 550px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 70px auto 40px;
+    padding: 20px 30px 70px;
+}
+
+.form{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    background: #edeef0;
+    border-radius: 40px;
+    margin-bottom: 30px;
+}
+
+.form input{
+    margin-left: 20px;
+    font-style: italic;
+    font-size: medium;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #2c1313;
+    font-weight: 14px;
+    padding: 10px;
+}
+.form button{
+    border: none;
+    outline: none;
+    padding: 20px 40px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.form button:hover{
+    background: #ff6666;
+}
+
+ul li{
+    list-style: none;
+    padding: 18px 12px 20px 50px;
+    left: 15px;
+    /* font-style: italic; */
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url('images/unchecked.png');
+    background-size: cover;
+    top: 12px;
+    left: 10px;
+    margin-right: 12px;
+    background-position: center;
+    align-items: center;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url('images/checked.png');
+}
+
+ul li span{
+    position: absolute;
+    top: 12px;
+    right: 0px;
+    text-align: center;
+    line-height: 40px;
+    color: #555;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 50%;
+}
+
+
+ul li span:hover{
+    background: #f2f2f2;
+    cursor: pointer;
+}
+
+
+
+ul li {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .todoapp {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .form input {
+        font-size: 14px; /* Smaller font size on mobile */
+    }
+
+    .form button {
+        padding: 10px 20px; /* Smaller button size */
+    }
+}
